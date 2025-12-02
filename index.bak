@@ -1,5 +1,8 @@
 // index.js メインファイル
 
+// .env使用
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
