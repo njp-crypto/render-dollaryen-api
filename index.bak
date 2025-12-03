@@ -6,13 +6,19 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
-// RenderはPORT環境変数でポートを渡す :contentReference[oaicite:3]{index=3}
-const PORT = process.env.PORT || 3000;
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello from Render + Express');
+
+// URL指定
+app.post("/api/chat", async (req, res) => {
+  const message = req.body.message;
+  res.json({ reply: "あなたの送ったメッセージ：" + message });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
+
+// RenderはPORT環境変数でポートを渡す :contentReference[oaicite:3]{index=3}
+const PORT = process.env.PORT || 10000;
+
+app.listen(PORT, () => {
+  console.log("Server Running on " + PORT);
 });

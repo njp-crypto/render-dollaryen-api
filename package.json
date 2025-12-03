@@ -1,17 +1,18 @@
 {
-  "name": "render-dollaryen-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "dotenv": "^17.2.3",
-    "express": "^4.19.0"
-  }
+	"name": "render-dollaryen-api",
+	"version": "1.0.0",
+	"description": "Render backend to fetch latest USD/JPY rate via OpenAI",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"engines": {
+		"node": "24.11.1"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.19.0",
+		"openai": "^4.77.0"
+	}
 }
